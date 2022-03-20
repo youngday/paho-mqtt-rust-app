@@ -1,0 +1,17 @@
+app:
+  build: something
+  container_name: another_thing
+  environment:
+    - ONE_ENV=false
+    - SEC_ENV=something
+  ip_config:
+    mqtt_ip: tcp://127.0.0.1:1883
+    # use 4 poarts 8080
+    udp2serial_send_ip: "127.0.0.1:8080"
+    udp2serial_receive_ip: "127.0.0.1:8081"
+  serial_port:
+    #port_no: com6
+    port_no: /dev/ttyUSB50
+    baudrate: 115200
+
+
